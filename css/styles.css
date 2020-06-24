@@ -1,0 +1,69 @@
+body {
+  background: url(../assets/background-image.webp) top;
+  background-size: contain;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px 20px 30px 20px;
+  margin-top: 2.5rem;
+  max-width: 600px;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 3.5rem;
+  font-variant: small-caps;
+  color: white;
+  text-shadow: 1px 1px black;
+  margin: 0;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px black;
+  margin: 0
+}
+
+h3 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 1px 1px black;
+  margin: 0
+}
+
+#video-carousel {
+  width: 80%;
+  max-width: 800px;
+  margin: 130px auto;
+}
+
+.carousel-item img {
+  width: inherit;
+}
+
+.carousel-item video {
+  width: inherit;
+}
+
+.carousel-control-prev {
+  top: 25%;
+  height: 50%;
+  margin-top: -10px;
+}
+
+.carousel-control-next {
+  top: 25%;
+  height: 50%;
+  margin-top: -10px;
+}
