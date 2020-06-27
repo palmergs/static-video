@@ -6,7 +6,7 @@ RSpec.describe Asset, type: :model do
   end
 
   it 'can be persisted' do
-    expect(create(:asset)).to be_persisted
-    expect(create(:asset)).to be_persisted
+    expect(create(:video_asset)).to be_persisted
+    expect(create(:image_asset)).to be_persisted
   end
 end

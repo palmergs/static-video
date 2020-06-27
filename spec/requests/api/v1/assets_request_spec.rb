@@ -10,7 +10,7 @@ RSpec.describe 'Api::V1::Assets', type: :request do
 
   describe 'GET /show' do
     it 'returns http success' do
-      site = create(:asset)
+      asset = create(:video_asset)
       get "/api/v1/assets/#{ asset.id }"
       expect(response).to have_http_status(:success)
     end
