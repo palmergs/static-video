@@ -1,0 +1,2 @@
+class VideoAsset < Asset
+end
