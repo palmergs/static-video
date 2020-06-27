@@ -1,0 +1,130 @@
+#--------1---------2---------3---------4---------5---------6---------7---------8---------9---------0
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'Rackfile'
+    - 'frontend/**/*'
+    - 'node_modules/**/*'
+    - 'static-site-generator/**/*'
+    - 'examples/**/*'
+Security/Eval:
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Security/MarshalLoad:
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Metrics/PerceivedComplexity:
+  Max: 8
+Metrics/CyclomaticComplexity:
+  Max: 8
+Metrics/ModuleLength:
+  Max: 200
+Metrics/ClassLength:
+  Max: 200
+Metrics/MethodLength:
+  Max: 16
+  Exclude:
+    - 'app/controllers/**/*.rb'
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Metrics/AbcSize:
+  Max: 25
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+    - 'app/controllers/**/*.rb'
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Documentation:
+  Exclude:
+    - 'app/**/*.rb'
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Style/BlockComments:
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'app/controllers/**/*.rb'
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Style/Lambda:
+  EnforcedStyle: literal
+Naming/MethodParameterName:
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Layout/TrailingWhitespace:
+  Enabled: true
+Layout/TrailingEmptyLines:
+  Enabled: true
+Layout/DotPosition: 
+  EnforcedStyle: trailing
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 4
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+  IndentationWidth: 4
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: space
+  SpaceBeforeBlockParameters: false
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: same_line
+Layout/MultilineMethodDefinitionBraceLayout:
+  EnforcedStyle: same_line
+Layout/SpaceInsideStringInterpolation:
+  EnforcedStyle: space
+Layout/FirstArgumentIndentation:
+  IndentationWidth: 4
+Layout/FirstArrayElementIndentation:
+#  EnforcedStyle: consistent
+  EnforcedStyle: special_inside_parentheses
+#TODO: waiting for beginning_only to be implemented
+#Layout/EmptyLinesAroundBlockBody:
+#  EnforcedStyle: beginning_only
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/NumericPredicate:
+  Enabled: true
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses_except_multiline
+#Style/RedundantFreeze:
+#  Enabled: false
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Style/RegexpLiteral:
+  Enabled: true
+Style/RescueStandardError:
+  Enabled: true
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+Style/EmptyMethod:
+  Enabled: false
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
