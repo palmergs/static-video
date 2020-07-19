@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+site = Site.find_or_create_by(title: 'Example', subtitle: 'An example site', background: 'background_image.jpg')
+VideoAsset.find_or_create_by(site: site, alt: 'An example video', filename: 'example.mp4')
+ImageAsset.find_or_create_by(site: site, alt: 'An example image', filename: 'example.jpg')
+

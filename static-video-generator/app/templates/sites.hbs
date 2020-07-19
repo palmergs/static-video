@@ -1,1 +1,13 @@
-{{outlet}}
+<div class="row">
+  <div class="col-12">
+    Sites
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <SiteList @model={{ @model }}/>
+  </div>
+  <div class="col-9">
+    {{outlet}}
+  </div>
+</div>

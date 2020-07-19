@@ -1,5 +1,7 @@
-{{#if @model}}
-
-{{else}}
-  <p>No Sites</p>
-{{/if}}
+<div class="site-list" ...attributes>
+  <ul class="list-group">
+    {{#each @model as |site|}}
+      <SiteItem @model={{ site }}/>
+    {{/each}}
+  </ul>
+</div>
