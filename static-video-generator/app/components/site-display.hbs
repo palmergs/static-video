@@ -1,0 +1,16 @@
+<BsForm @onSubmit={{action "submit"}} as |form|>
+  <form.group>
+    <label class="control-label">Title</label>
+    <input value={{this.title}} class="form-control" oninput={{action (mut this.title) value="target.value"}} type="text">
+  </form.group>
+
+  <form.group>
+    <label class="control-label">Subtitle</label>
+    <input value={{this.subtitle}} class="form-control" oninput={{action (mut this.subtitle) value="target.value"}} type="text">
+  </form.group>
+
+  <form.group>
+    <label class="control-label">Background</label>
+    <input value={{this.background}} class="form-control" oninput={{action (mut this.background) value="target.value"}} type="text">
+  </form.group>    
+</BsForm>
