@@ -14,7 +14,7 @@ player.playlist([
   {
     sources: [
       {
-        src: '../videos/Lost_Room_Disc_1.m4v',
+        src: '../videos/video1.mp4',
         type: 'video/x-m4v',
       }
     ],
@@ -25,7 +25,7 @@ player.playlist([
   {
     sources: [
       {
-        src: '../videos/Lost_Room_Disc_2.m4v',
+        src: '../videos/video1.mp4',
         type: 'video/x-m4v'
       }
     ],
@@ -36,7 +36,7 @@ player.playlist([
   {
     sources: [
       {
-        src: '../videos/Lost_Room_Disc_3.m4v',
+        src: '../videos/video1.mp4',
         type: 'video/x-m4v'
       }
     ],
@@ -47,7 +47,7 @@ player.playlist([
   {
     sources: [
       {
-        src: '../videos/Lost_Room_Disc_1.m4v',
+        src: '../videos/video1.mp4',
         type: 'video/x-m4v'
       }
     ],
@@ -58,7 +58,7 @@ player.playlist([
   {
     sources: [
       {
-        src: '../videos/Lost_Room_Disc_2.m4v',
+        src: '../videos/video1.mp4',
         type: 'video/x-m4v'
       }
     ],
@@ -69,7 +69,7 @@ player.playlist([
   {
     sources: [
       {
-        src: '../videos/Lost_Room_Disc_3.m4v',
+        src: '../videos/video1.mp4',
         type: 'video/x-m4v'
       }
     ],
@@ -83,4 +83,3 @@ player.ready(function() {
   console.log("...player is now ready.");
 });
 
-//    <source src="videos/Lost_Room_Disc_1.m4v" type="video/x-m4v">
