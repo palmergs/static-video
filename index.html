@@ -20,13 +20,17 @@
       <h2 id="client">The Fisherman</h2>
     </div>
   </div>
-
-  <section id="video-wrapper">
-    <video id="main-player" class="video-js">
+ 
+  <section class="main-preview-player">
+    <video id="main-player" class="video-js vjs-fluid" controls preload="auto" crossorigin="anonymous">
+      <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
-    <div id="playlist" class="vjs-playlist vjs-fluid"></div>
+
+    <div class="playlist-container  preview-player-dimensions vjs-fluid">
+      <div class="vjs-playlist"></div>
+    </div>
   </section>
-  
+
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/video.js"></script>

@@ -1,7 +1,7 @@
 body {
   background: url(../assets/background-image.webp) top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto;
   background-color: black;
   margin: 0;
   padding: 0;
@@ -44,22 +44,34 @@ h3 {
   margin: 0
 }
 
-#video-wrapper {
-  width: 100%;
-  max-width: 1600px;
-  margin: 20px auto;
+.main-preview-player {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-#main-player {
-  width: 70%;
-  float: left;
+.video-js,
+.playlist-container {
+  position: relative;
+  min-width: 300px;
+  min-height: 150px;
+  height: 0;
 }
 
-#playlist {
-  width: 30%;
-  float: right;
+.video-js {
+  flex: 3 1 70%;
 }
 
+.playlist-container {
+  flex: 1 1 30%;
+}
 
-
-
+.vjs-playlist {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
