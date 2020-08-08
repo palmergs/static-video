@@ -1,6 +1,8 @@
 body {
   background: url(../assets/background-image.webp) top;
+  background-repeat: no-repeat;
   background-size: contain;
+  background-color: black;
   margin: 0;
   padding: 0;
 }
@@ -42,28 +44,22 @@ h3 {
   margin: 0
 }
 
-#video-carousel {
-  width: 80%;
-  max-width: 800px;
-  margin: 130px auto;
+#video-wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 20px auto;
 }
 
-.carousel-item img {
-  width: inherit;
+#main-player {
+  width: 70%;
+  float: left;
 }
 
-.carousel-item video {
-  width: inherit;
+#playlist {
+  width: 30%;
+  float: right;
 }
 
-.carousel-control-prev {
-  top: 25%;
-  height: 50%;
-  margin-top: -10px;
-}
 
-.carousel-control-next {
-  top: 25%;
-  height: 50%;
-  margin-top: -10px;
-}
+
+
