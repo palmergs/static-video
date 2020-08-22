@@ -2,6 +2,9 @@
 
 
 /temp
+/structure
+
+videosite/target
 
 **/*.mv4
 **/*.m4v

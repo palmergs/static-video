@@ -1,0 +1,14 @@
+[package]
+name = "videosite"
+version = "0.1.0"
+authors = ["Galen <palmergs@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "*"
+regex = "*"
+lazy_static = "*"
+rust-embed = "*"
+yaml-rust = "*"
