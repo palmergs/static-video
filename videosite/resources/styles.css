@@ -1,0 +1,77 @@
+body {
+  background: url(background.jpg) top;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px 20px 30px 20px;
+  margin-top: 2.5rem;
+  max-width: 600px;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 3.5rem;
+  font-variant: small-caps;
+  color: white;
+  text-shadow: 1px 1px black;
+  margin: 0;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px black;
+  margin: 0
+}
+
+h3 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 1px 1px black;
+  margin: 0
+}
+
+.main-preview-player {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.video-js,
+.playlist-container {
+  position: relative;
+  min-width: 300px;
+  min-height: 150px;
+  height: 0;
+}
+
+.video-js {
+  flex: 3 1 70%;
+}
+
+.playlist-container {
+  flex: 1 1 30%;
+}
+
+.vjs-playlist {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
