@@ -44,7 +44,7 @@ fn main() {
     };
 
     let mut manifest = Manifest::new();
-    let details = Manifest::details("/home/galen/Projects/static-video/structure/KnowMe/Fisherman Data.txt");
+    let details = Manifest::details("/home/galen/Projects/static-video/structure/project.txt");
     println!("Loaded details:\n{:?}", details);
 }
 

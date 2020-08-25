@@ -7,6 +7,15 @@ body {
   padding: 0;
 }
 
+footer {
+  padding-top: 130px;
+  height: 90px;
+}
+
+img.logo {
+  height: 90px;
+}
+
 .content {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 30px 20px 30px 20px;
@@ -49,6 +58,9 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background: url(watermark-600x.png) no-repeat center center;
+  background-size: auto;
+  min-height: 600px;
 }
 
 .video-js,
