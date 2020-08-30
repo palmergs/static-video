@@ -6,6 +6,10 @@ use clap::{App, Arg};
 
 use std::fmt;
 use std::fs;
+use std::fs::File;
+use std::path;
+use std::io::prelude::*;
+use std::io::BufWriter;
 use std::collections::HashMap;
 
 use rust_embed::RustEmbed;
@@ -21,6 +25,11 @@ fn main() {
         .version(VERSION)
         .about("Builds a static site suitable for delivery on flash drive from a file folder.")
         .author("Galen P.")
+        .arg(Arg::with_name("path")
+            .short("p")
+            .long("path")
+            .help("Path to the directory to build the site")
+            .takes_value(true))
         .arg(Arg::with_name("manifest")
             .short("m")
             .long("manifest")
@@ -38,7 +47,12 @@ fn main() {
             .takes_value(true))
         .get_matches();
 
-    let videos_dir = match matches.value_of("dir") {
+    let dist_dir = match matches.value_of("path") {
+        Some(s) => s,
+        None => "../dist",
+    };
+
+    let videos_dir = match matches.value_of("videos") {
         Some(s) => s,
         None => "/home/galen/Projects/static-video/structure/Videos",
     };
@@ -46,6 +60,46 @@ fn main() {
     let mut manifest = Manifest::new();
     let details = Manifest::details("/home/galen/Projects/static-video/structure/project.txt");
     println!("Loaded details:\n{:?}", details);
+
+    match doit(dist_dir) {
+        Ok(_) => println!("Done!"),
+        Err(err) => println!("WTF? {:?}", err),
+    }
+}
+
+fn doit(dist_dir: &str) -> std::io::Result<()> {
+    println!("Removing old distribution: {}", dist_dir);
+    fs::remove_dir_all(dist_dir)?;
+
+    // copy all static resources
+    for f in Asset::iter() {
+        let resource = &f.to_owned();
+        match Asset::get(resource) {
+            Some(cow) => {
+                let write_to = format!("{}/{}", dist_dir, resource);
+                println!("Copying to: {}", &write_to);
+
+                let parent = path::Path::new(&write_to).parent().unwrap();
+                println!("Creating directory: {}", parent.display());
+                assert!(fs::create_dir_all(parent).is_ok());
+
+                println!("Writing to: {}", &write_to);
+                let mut buffer = BufWriter::new(File::create(&write_to)?);
+                buffer.write_all(&cow)?;
+                buffer.flush()?;
+            },
+            None => (),
+        }
+    }
+
+    // read the video directory to build a playlist
+    // read the manifest
+    // write videos to destination
+    // write script.js
+    // write style.css
+    // write index.html
+
+    Ok(())
 }
 
 #[derive(Debug, Clone)]
