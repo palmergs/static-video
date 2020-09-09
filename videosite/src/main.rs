@@ -54,20 +54,20 @@ fn main() {
 
     let videos_dir = match matches.value_of("videos") {
         Some(s) => s,
-        None => "/home/galen/Projects/static-video/structure/Videos",
+        None => "/home/galen/Projects/static-video/structure/Films",
     };
 
     let mut manifest = Manifest::new();
     let details = Manifest::details("/home/galen/Projects/static-video/structure/project.txt");
     println!("Loaded details:\n{:?}", details);
 
-    match doit(dist_dir) {
+    match doit(videos_dir, dist_dir) {
         Ok(_) => println!("Done!"),
         Err(err) => println!("WTF? {:?}", err),
     }
 }
 
-fn doit(dist_dir: &str) -> std::io::Result<()> {
+fn doit(videos_dir: &str, dist_dir: &str) -> std::io::Result<()> {
     println!("Removing old distribution: {}", dist_dir);
     fs::remove_dir_all(dist_dir)?;
 
@@ -93,6 +93,15 @@ fn doit(dist_dir: &str) -> std::io::Result<()> {
     }
 
     // read the video directory to build a playlist
+    println!("Reading available videos from: {}", videos_dir);
+    for entry in fs::read_dir(videos_dir)? {
+        let entry = entry?;
+        let path = entry.path();
+        if !path.is_dir() {
+            println!("Found film: {:?}", path);
+        }
+    }
+
     // read the manifest
     // write videos to destination
     // write script.js
